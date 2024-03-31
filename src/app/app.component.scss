@@ -1,0 +1,13 @@
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    z-index: 2;
+    opacity: 1;
+  
+    app-footer {
+      margin-top: auto;
+    }
+  }
+  

@@ -1,0 +1,48 @@
+.container {
+  margin-top: 16px;
+}
+
+.input-container {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 4px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.input {
+  min-width: 320px;
+}
+
+mat-icon:hover {
+  cursor: pointer;
+}
+
+.container-tabla {
+ mat-icon {
+    color: grey;
+  }
+}
+
+.table-header {
+  font-size: 16px;
+  background-color: rgba(225, 225, 225, 0.37);
+}
+
+.mat-mdc-paginator {
+  border-top: 1px solid #e2e2e2;
+}
+
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 4343;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

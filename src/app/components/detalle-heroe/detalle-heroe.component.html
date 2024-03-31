@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 offset-md-3 col-md-6 mt-5">
+
+            <mat-card class="example-card">
+                <mat-card-header>
+                  <mat-card-title>{{heroe.nombre}}</mat-card-title>
+                  <mat-card-subtitle *ngIf="heroe.pais">PAIS: {{heroe.pais}}</mat-card-subtitle>
+                  <mat-card-subtitle *ngIf="heroe.edad">EDAD: {{ heroe.edad}}</mat-card-subtitle>
+
+                </mat-card-header>
+                <mat-card-content>
+
+                  <p *ngIf="heroe.poder">PODER: {{heroe.poder}}</p>
+                  <mat-divider *ngIf="heroe.descripcion"></mat-divider>
+                  <p class="m-2">{{heroe.descripcion}}</p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-raised-button color="warn"(click)="volver()">VOLVER</button>
+                </mat-card-actions>
+              </mat-card>
+        </div>
+    </div>
+</div>

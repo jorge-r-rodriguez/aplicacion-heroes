@@ -1,0 +1,41 @@
+<h2 mat-dialog-title *ngIf="action == 'add'">AÑADIR NUEVO HEROE</h2>
+<h2 mat-dialog-title *ngIf="action == 'edit'">{{ heroeSelected.nombre }}</h2>
+
+<mat-dialog-content class="container-form">
+  <form [formGroup]="form" style="display: flex; flex-direction: column">
+    <div class="form-field-heroe">
+      <span class="heroe-label">Nombre</span>
+      <mat-form-field class="input">
+        <input matInput formControlName="nombre" />
+      </mat-form-field>
+    </div>
+
+    <div class="form-field-heroe">
+      <span class="heroe-label">Edad</span>
+      <mat-form-field class="input">
+        <input type="number" matInput formControlName="edad" />
+      </mat-form-field>
+    </div>
+    <div class="form-field-heroe">
+      <span class="heroe-label">Pais</span>
+      <mat-form-field class="input">
+        <input matInput formControlName="pais" />
+      </mat-form-field>
+    </div>
+    <div class="form-field-heroe">
+      <span class="heroe-label">Poder</span>
+      <mat-form-field class="input">
+        <input matInput formControlName="poder" />
+      </mat-form-field>
+    </div>
+
+    <mat-form-field>
+      <mat-label>Descripción</mat-label>
+      <textarea matInput formControlName="descripcion"></textarea>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <button mat-raised-button color="primary"[mat-dialog-close]="true" cdkFocusInitial [disabled]="form.invalid" (click)="addHeroe()">Aceptar</button>
+</mat-dialog-actions>
